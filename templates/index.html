@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% block body %}
+  <div class = "jumbotron">
+    <p> Este párrafo pertenece a la vista acerca </p>
+
+        <h1> "Servicios en la Nube" </h1>
+          </br>
+          <p>
+            <img src={{url_for('static', filename="logo-tec.png")}}
+            height="250" width="250">
+          </p>
+
+        <ul>
+          {% for elemento in variable %}
+          <li> {{elemento}} </li>
+          {% endfor %}
+        </ul>
+
+        {% if "Acerca" in variable %}
+        <p>El elemento Acerca existe en la lista </p>
+          {% else %}
+        <p>El elemento Acerca no existe en la lista</p>
+        {% endif %}
+
+        <form action="/" method="POST">
+          <input type="text" name="nombre" id="nombre">
+          <input type="text" name="apellido" id="apellido">
+          <input type="submit" class="btn btn-primary" value="Registrar">
+            </form>
+
+        <p>{{mensaje}}</p>
+      </div>
+      {% endblock %}
+{% endblock %}
