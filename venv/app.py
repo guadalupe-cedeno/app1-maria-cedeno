@@ -9,7 +9,7 @@ Bootstrap(app)
 
 #configuracion para conexion con postgress
 #app.config['SQLALCHEMY_DATABASE_URI']='postgresql+psycopg2://postgres:12345@localhost:5432/escolares'
-app.config['SQLALCHEMY_DATABASE_URI']='postgres:postgres://peounwgkfretfn:925178ef18666e1f4b0ca9221a3c76e083ace5ec9cf2a8e5aa8aef6b1eb2673a@ec2-54-144-45-5.compute-1.amazonaws.com:5432/dbek9bb3cu83a1'
+app.config['SQLALCHEMY_DATABASE_URI']='postgres://peounwgkfretfn:925178ef18666e1f4b0ca9221a3c76e083ace5ec9cf2a8e5aa8aef6b1eb2673a@ec2-54-144-45-5.compute-1.amazonaws.com:5432/dbek9bb3cu83a1'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
