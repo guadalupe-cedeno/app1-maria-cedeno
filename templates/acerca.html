@@ -1,11 +1,32 @@
 {% extends 'base.html' %}
-
 {% block title %}
-Acerca
+  Acerca
 {% endblock %}
 
 {% block body %}
-  {% for resultado in variable %}
-  <p> {{resultado.nombre}},{{resultado.apellido}} </p>
-  {% endfor %}
+<div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for resultado in variable %}
+      <tr>
+        <th scope="row">{{resultado.id}}</th>
+        <td>{{resultado.nombre}}</td>
+        <td>{{resultado.apellido}}</td>
+        <td>
+          <a href="/editar/{{resultado.id}}"class="btn btn-warning btn-xs">Editar</a>
+          <a href="/eliminar/{{resultado.id}}"class="btn btn-warning btn-xs">Eliminar</a>
+        </td>
+      </tr>
+      {% endfor %}
+     </tbody>
+  </table>
+</div>
+
 {% endblock %}
